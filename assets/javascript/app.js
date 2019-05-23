@@ -5,7 +5,7 @@ $gifText = $('#gifText')
 $btnArea = $('#btnArea')
 
 // JS elements
-let apiKey = '7NfyKqoRW6mHhbsfWjQPkIeS1zjsYiYW'
+const apiKey = '7NfyKqoRW6mHhbsfWjQPkIeS1zjsYiYW'
 let topics = []
 let queryURL = 'http://api.giphy.com/v1/gifs/search?q=' + 'cat' + '&api_key=' + apiKey + '&limit=10'
 

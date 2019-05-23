@@ -1,6 +1,6 @@
 
 let apiKey = '7NfyKqoRW6mHhbsfWjQPkIeS1zjsYiYW'
-let animeList = []
+let giphyCollectorArr = []
 
 $.ajax({
     url: queryURL,

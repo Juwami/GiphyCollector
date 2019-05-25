@@ -9,12 +9,20 @@ const apiKey = '7NfyKqoRW6mHhbsfWjQPkIeS1zjsYiYW'
 let topics = []
 let queryURL = 'http://api.giphy.com/v1/gifs/search?q=' + 'cat' + '&api_key=' + apiKey + '&limit=10'
 
+// prevents user from spamming blank input, also pushes all inputs to array as upper case
 $addBtn.on('click', function () {
-    topics.push($gifText.val())
+    if ($gifText.val() === '') {
+        return false
+    }
+    else {
+    topics.push($gifText.val().toUpperCase())
     console.log(topics)
     renderBtn()
+    }
+    $gifText.val('')
 })
 
+// function to render button
 function renderBtn() {
     $btnArea.empty()
     for (i = 0; i < topics.length; i++) {

@@ -50,13 +50,18 @@ function displayGifStats() {
         let data = response.data
         console.log(response.data.length)
         console.log(response.data)
-        for (i = 0; i < response.data.lenth; i++) {
-            let gifDiv = $('<div>')
-            let rating = data.topics[i].rating
-            let p = $('<p>').text('Rating: ' + rating)
-            let gifImage = $('<image>')
-            animalImage
-            
+        for (i = 0; i < response.data.length; i++) {
+            let $gifDiv = $('<div>')
+            $gifDiv.addClass('mr-4')
+            let $rating = data[i].rating
+            let $p = $('<p>').text('Rating: ' + $rating)
+            let $gifImage = $('<img>')
+            $gifImage.attr("src", data[i].images.fixed_height.url)
+
+            $gifDiv.append($gifImage)
+            $gifDiv.append($p)
+
+            $gifArea.append($gifDiv)
         }
     })
 }

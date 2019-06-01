@@ -38,7 +38,7 @@ $(document).on('click', '.gifNewBtn', displayGifStats)
 function displayGifStats() {
     let gifName = $(this).attr('gif-name')
     console.log(gifName)
-    let queryURL = 'http://api.giphy.com/v1/gifs/search?q=' + gifName + '&api_key=' + apiKey + '&limit=10'
+    let queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + gifName + '&api_key=' + apiKey + '&limit=10'
 
     // cleans area for new gifs
     $gifArea.empty()
